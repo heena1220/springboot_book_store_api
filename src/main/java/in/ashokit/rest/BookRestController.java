@@ -24,6 +24,7 @@ public class BookRestController {
         return new ResponseEntity<>(save, HttpStatus.CREATED);
     }
 
+    @GetMapping
     @PutMapping("/book/{bookId}")
     public ResponseEntity<Book> saveBook(@RequestBody Book book, @PathVariable Integer bookId){
         book.setBookId(bookId);
